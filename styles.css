@@ -110,6 +110,8 @@ main {
     background-color: var(--off-white);
 }
 
+/* ----------------------------- Section 1 -------------------------------- */
+
 .main-exchange-container {
     width: 100%;
     height: auto;
@@ -158,7 +160,7 @@ main {
     min-width: 23.5rem;
     max-width: 50rem;
     height: 36rem;
-    margin: 0 auto;
+    margin: 5rem auto 5rem auto;
     font-family: 'Inter', sans-serif;
 }
 
@@ -263,4 +265,48 @@ main {
 
 .main-commission-table .commission-table--date {
     background-color: var(--soft-blue);
+}
+
+/* ----------------------------- Section 2 -------------------------------- */
+
+.main-product-detail {
+    position: relative;
+    width: 100%;
+    min-width: 32rem;
+    height: auto;
+    padding: 2rem 1rem;
+    background-color: var(--warm-black);
+}
+
+.product-detail--doge-logo img{
+    position: absolute;
+    width: 8rem;
+    height: auto;
+    top: -6.5rem;
+    left: calc(50% - 4rem);
+}
+
+.product-detail--title {
+    width: 90%;
+    min-width: 28.8rem;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 7rem;
+    text-align: center;
+}
+
+.product-detail--title h2 {
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+.product-detail--title p {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
 }

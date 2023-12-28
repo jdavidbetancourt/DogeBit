@@ -28,6 +28,7 @@
 html {
     font-size: 62.5%;
     font-family: 'DM Sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* ---------------------HEADER-------------------- */
@@ -502,6 +503,7 @@ main {
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: var(--black);
+    cursor: pointer;
 }
 
 .plan-card--ca span {

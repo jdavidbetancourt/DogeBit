@@ -120,6 +120,15 @@ main {
     text-align: center;
 }
 
+/* Scroll para las tablas de monedas y comisiones */
+.tables-container--slider {
+    display: flex;
+    height: 50rem;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
 .main-exchange-container--title {
     width: 90%;
     min-width: 28.8rem;
@@ -146,6 +155,8 @@ main {
     color: var(--black);
 }
 
+
+
 .main-exchange-container p {
     margin-bottom: 3rem;
     font-size: 1.4rem;
@@ -154,15 +165,25 @@ main {
     color: #757575;
 }
 
+.main-currency-table {
+    margin: 4rem 2rem 0 4rem;
+}
+.main-commission-table {
+    margin: 4rem 4rem 0 2rem;
+}
+
 .main-currency-table,
 .main-commission-table {
     width: 70%;
     min-width: 23.5rem;
     max-width: 50rem;
     height: 36rem;
-    margin: 5rem auto 5rem auto;
+    /* Aquí hacemos el scroll para las tablas */
+    scroll-snap-align: center;
     font-family: 'Inter', sans-serif;
 }
+
+
 
 .main-currency-table .currency-table--title,
 .main-commission-table .commission-table--title {
@@ -392,16 +413,35 @@ main {
     color: #757575;
 }
 
+/* Aquí estamos creando un scroll horizontal para las tarjetas de los paquetes */
+.plans-container--slider {
+    display: flex;
+    height: 31.6rem;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
 .plans-container--card {
     position: relative;
+    /* Esto es parte del scroll */
+    scroll-snap-align: center; 
     width: 70%;
-    min-width: 23rem;
+    min-width: 19rem;
     max-width: 30rem;
     height: 25rem;
-    margin: 5rem auto 0;
+    margin: 5rem 2.5rem 0;
     background-color: var(--just-white);
     border-radius: 1.5rem;
     box-shadow: 0 .4rem .8rem rgba(89, 73, 30, 0.16);
+}
+
+.month-card {
+    margin-left: 7rem;
+}
+
+.week-card {
+    margin-right: 7rem;
 }
 
 .recommended {
@@ -441,8 +481,8 @@ main {
 .dollar {
     position: absolute;
     top: 4rem;
-    left: calc(32%);
-    max-width: calc(32%);
+    left: calc(30%);
+    max-width: calc(30%);
 }
 
 .plan-card--saving {
@@ -470,4 +510,50 @@ main {
     height: 2rem;
     vertical-align: text-bottom;
 
+}
+
+/* ---------------------------- Footer ---------------------------- */
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 15rem;
+    background-color: var(--bitcoin-orange);
+}
+
+footer section {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .left ul {
+    font-size: 1.4rem;
+    font-weight: 50rem;
+    line-height: 1.8rem;
+    list-style: none;
+}
+
+.left li {
+    margin: 1rem 0;
+}
+
+.left a {
+    text-decoration: none;
+    color: var(--just-white);
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.right img {
+    width: 8rem;
+    height: auto;
+}
+
+.right p {
+    color: var(--just-white);
 }
